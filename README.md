@@ -1,80 +1,91 @@
-Real-Time Collaborative Canvas
+# 🎨 Real-Time Collaborative Canvas
 
-This is a multi-user, real-time drawing application built with Node.js and vanilla JavaScript. It allows multiple users to draw on the same canvas simultaneously, see each other's cursors, and share a global undo/redo history.
+A **multi-user, real-time drawing application** built with **Node.js** and **vanilla JavaScript**. It allows multiple users to draw on the same canvas simultaneously, view each other’s cursors, and share a **global undo/redo history** — all synchronized in real time.
 
-This project was built to demonstrate mastery of vanilla JavaScript, the HTML5 Canvas API, and real-time state synchronization with WebSockets.
+This project showcases mastery of the **HTML5 Canvas API**, **vanilla JavaScript (ES6)**, and **real-time state synchronization** using **WebSockets**.
 
-🚀 Core Features
+---
 
-Real-Time Sync: Drawings appear on all clients' screens instantly.
+## 🚀 Live Demo
 
-Drawing Tools: Brush and eraser tools are available.
+🔗 **Try it here:** [https://collaborative-canvas-vw5y.onrender.com/](https://collaborative-canvas-vw5y.onrender.com/)
 
-Tool Properties: Users can select custom colors and adjust stroke width.
+---
 
-Live User Cursors: See where other users are on the canvas, complete with their assigned color.
+## ✨ Core Features
 
-User List: An "Online" list shows all currently connected users.
+* **🖊️ Real-Time Sync** — Drawings appear instantly on all connected clients.
+* **🎨 Drawing Tools** — Brush and eraser tools supported.
+* **⚙️ Tool Properties** — Custom colors and adjustable stroke width.
+* **🖱️ Live User Cursors** — See other users’ cursor positions with unique colors.
+* **👥 User List** — Displays all currently connected users in real time.
+* **♻️ Global Undo/Redo** — Server-authoritative undo/redo shared by all users.
+* **📱 Mobile/Touch Support** — Works seamlessly on touch devices.
 
-Global Undo/Redo: The most complex feature. Undo/redo is global and server-authoritative, so all users share the same drawing history.
+---
 
-Mobile/Touch Support: The canvas supports drawing via touch events (touchstart, touchmove).
+## 🧰 Tech Stack
 
-🔧 Tech Stack
+| Component       | Technology                                          |
+| --------------- | --------------------------------------------------- |
+| **Backend**     | Node.js, Express, Socket.io                         |
+| **Frontend**    | Vanilla JavaScript (ES6 Classes), HTML5 Canvas, CSS |
+| **Development** | Nodemon for live server reload                      |
 
-Backend: Node.js, Express, Socket.io
+---
 
-Frontend: Vanilla JavaScript (ES6 Classes), HTML5 Canvas, CSS
+## ⚙️ Setup & Running
 
-Development: nodemon for live server reload.
+### 1️⃣ Install Dependencies
 
-📦 Setup & Running
-
-Install Dependencies:
-
+```bash
 npm install
+```
 
+### 2️⃣ Run in Development Mode
 
-Run in Development Mode:
-(Uses nodemon to auto-restart on file changes)
+(Uses `nodemon` for live reload)
 
+```bash
 npm run dev
+```
 
+### 3️⃣ Run in Production Mode
 
-Run in Production Mode:
-
+```bash
 npm start
+```
 
+### 4️⃣ Access the App
 
-Access the Application:
-Open http://localhost:3000 in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-🧪 How to Test Multi-User Features
+---
 
-Start the server using one of the commands above.
+## 🧪 Testing Multi-User Features
 
-Open http://localhost:3000 in two or more separate browser windows (or tabs).
+1. Start the server using one of the above commands.
+2. Open [http://localhost:3000](http://localhost:3000) in **two or more** browser windows or tabs.
+3. Observe:
 
-Observe:
+   * The **“Online” list** in both windows should display *You* and *User XXXX*.
+   * Drawing in one window appears **instantly** in the others.
+   * Each user’s **cursor** is visible in the other windows.
+   * Clicking **Undo** in one window undoes the last action **for all users**.
+   * Clicking **Redo** reapplies the action **for all users**.
 
-The "Online" list in both windows should show "You" and "User XXXX".
+---
 
-Drawing in one window will appear in the other in real-time.
+## ⚠️ Known Limitations
 
-You will see the colored cursor of the other user moving on your canvas.
+* **Single Room:** Currently hard-coded to one default room. Backend supports multiple rooms, but the client UI doesn’t expose room creation/joining.
+* **No Persistence:** Drawing history is stored **in-memory**. Restarting the server clears all drawings.
+* **Clear is Final:** The *Clear* button wipes all drawings and history permanently — not undoable.
 
-Clicking Undo in one window will undo the last operation for all windows.
+---
 
-Clicking Redo will also redo the action for all windows.
+## ⏱️ Time Spent on Project
 
-⚠️ Known Limitations
+**Approximately:** 12 hours
 
-Single Room: The application is hard-coded to use a single default-room. The backend architecture supports multiple rooms, but the client does not provide a way to select or create them.
-
-No Persistence: The drawing history is stored in server memory. If the server restarts, all drawings are lost.
-
-Clear is Final: The "Clear" button is not an undoable operation. It wipes the server's history completely for that room.
-
-⏱️ Time Spent on Project
-
-"Approximately 12 hours"
+Would you like me to also reformat your **ARCHITECTURE.md** file in the same professional style next?
