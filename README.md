@@ -87,5 +87,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## ⏱️ Time Spent on Project
 
 **Approximately:** 12 hours
-
-Would you like me to also reformat your **ARCHITECTURE.md** file in the same professional style next?
